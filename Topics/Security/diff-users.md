@@ -37,4 +37,3 @@ Un **common user** è un utente che esiste nel **Container Database (CDB)** e in
 | **Global Database User**  | Accesso a più database (PDB/CDB)| Autenticazione tramite LDAP o AD   | Gestione centralizzata di utenti con directory esterna.   |
 | **Common User**           | Globale a tutti i PDB del CDB   | Autenticazione locale o esterna    | Amministrazione e accesso globale a più PDB.              |
 
-Spero che questa spiegazione ti abbia chiarito le differenze!
