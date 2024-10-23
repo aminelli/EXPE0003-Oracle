@@ -1,0 +1,15 @@
+RMAN-> backup archivelog all;
+RMAN-> backup archivelog all delete input;
+
+RMAN-> configure RETENTION POLICY TO RECOVERY WINDOW of 7 days;
+RMAN-> configure RETENTION POLICY TO REDUNDANCY 2 ;
+
+rman-> delete obsolete;
+
+rman-> delete archivelog until time 'SYSDATE-7';
+
+
+rman target / <<EOF
+	BACKUP ARCHIVELOG all delete input;
+	delete obsolete;
+EOF
